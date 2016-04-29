@@ -1,5 +1,13 @@
-TIMES_SCORE = read.csv("TIMES_SCORE.csv", encoding="UTF-8")
-CWUR_SCORE = read.csv("CWUR_SCORE.csv", encoding="UTF-8")
+TIMES_SCORE = read.csv("~/Documents/BigData_Group4/TIMES_SCORE.csv", encoding="UTF-8")
+CWUR_SCORE = read.csv("~/Documents/BigData_Group4/CWUR_SCORE.csv", encoding="UTF-8")
+TIMES_SCORE_PUBLIC = subset(TIMES_SCORE, TIMES_SCORE$CONTROL == "Public")
+TIMES_SCORE_PRIVATE = subset(TIMES_SCORE, TIMES_SCORE$CONTROL == "Private nonprofit")
+
+CWUR_SCORE_PUBLIC = subset(CWUR_SCORE, CWUR_SCORE$CONTROL == "Public")
+CWUR_SCORE_PRIVATE = subset(CWUR_SCORE, CWUR_SCORE$CONTROL == "Private nonprofit")
+
+write.csv(CWUR_SCORE_PUBLIC, file = "~/Documents/BigData_Group4/CWUR_SCORE_PUBLIC.csv")
+write.csv(TIMES_SCORE_PUBLIC, file = "~/Documents/BigData_Group4/TIMES_SCORE_PUBLIC.csv")
 require(ggplot2)
 qplot(TIMES_SCORE$female_male_ratio, TIMES_SCORE$ADM_RATE_ALL)
 qplot(CWUR_SCORE$national_rank, CWUR_SCORE$ADM_RATE_ALL)
