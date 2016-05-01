@@ -8,7 +8,8 @@ World University Rankings: https://www.kaggle.com/mylesoneill/world-university-r
 3. What is the correlation between average SAT score and admission rate?
 
 ##Script Instructions
-1. Open the **collegeRankingScript.r** file in Rstudio and execute. 
+1. Download the CWUR_SCORE_PUBLIC and TIMES_SCORE_PUBLIC
+2. Download and run "scripts for public schools.r" to get the images (also in the repo)
 
 ###Side Note
 **Untitled.ipynb** has the work of combining the datasets and creating the condensed datasets used in the **collegeRankingScript.r** file.
